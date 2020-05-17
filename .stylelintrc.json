@@ -10,6 +10,18 @@
     "message": "Błąd wartości color/zapis"
    }
   ],
+  "font-family-no-duplicate-names": [
+   true,
+   {
+    "message": "Duplikowana nazwa rodziny czcionek"
+   }
+  ],
+  "font-family-no-missing-generic-family-keyword": [
+   true,
+   {
+    "message": "Brak zaimportowanej czcionki"
+   }
+  ],
   "order/order": [
    "custom-properties",
    "declarations"

@@ -4,8 +4,11 @@
  "useTabs": false,
  "semi": true,
  "singleQuote": true,
+ "jsxSingleQuote": false,
+ "jsxBracketSameLine": false,
  "trailingComma": "es5",
  "bracketSpacing": false,
+ "arrowParens": "always",
  "overrides": [
   {
    "files": ["*.html"],

@@ -1,0 +1,36 @@
+{
+ "extends": [
+  "stylelint-config-prettier"
+ ],
+ "plugins": ["stylelint-order"],
+ "rules": {
+  "color-no-invalid-hex": [
+   true,
+   {
+    "message": "Błąd wartości color/zapis"
+   }
+  ],
+  "order/order": [
+   "custom-properties",
+   "declarations"
+  ],
+  "order/properties-order": [
+   "content",
+   "display",
+   "padding",
+   "border",
+   "border-radius",
+   "margin",
+   "position",
+   "top",
+   "right",
+   "bottom",
+   "left",
+   "background",
+   "background-color",
+   "opacity",
+   "color",
+   "cursor"
+  ]
+ }
+}

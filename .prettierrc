@@ -1,0 +1,31 @@
+{
+ "printWidth": 80,
+ "tabWidth": 2,
+ "useTabs": false,
+ "semi": true,
+ "singleQuote": true,
+ "trailingComma": "es5",
+ "bracketSpacing": false,
+ "overrides": [
+  {
+   "files": ["*.html"],
+   "options": {
+    "tabWidth": 2,
+    "printWidth": 1600,
+    "htmlWhitespaceSensitivity": "ignore"
+   }
+  },
+  {
+   "files": [
+    "*.prettierrc*",
+    "*.stylelintrc*",
+    "*.gitignore*"
+   ],
+   "options": {
+    "tabWidth": 1,
+    "printWidth": 40,
+    "htmlWhitespaceSensitivity": "ignore"
+   }
+  }
+ ]
+}

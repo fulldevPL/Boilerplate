@@ -1,1 +1,3 @@
-console.log('xxx');
+import './css/style.css';
+
+console.log('message');

@@ -11,6 +11,14 @@ module.exports = {
     filename: '[name].[contenthash:6].js',
     path: path.resolve(__dirname, '../', 'dist'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   devServer: {
     open: true,
     host: 'localhost',

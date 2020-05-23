@@ -22,6 +22,85 @@
     "message": "Brak zaimportowanej czcionki"
    }
   ],
+  "function-calc-no-invalid": [
+   true,
+   {
+    "message": "Nieprawidłowe wyrażenie w obrębie calc()"
+   }
+  ],
+  "function-calc-no-unspaced-operator": [
+   true,
+   {
+    "message": "Brak spacji w obrębie funkcji calc()"
+   }
+  ],
+  "function-linear-gradient-no-nonstandard-direction": [
+   true,
+   {
+    "message": "Nieprawidłowe wyrażenie w obrębie linear-gradient() lub brak 'to' lub denostki deg"
+   }
+  ],
+  "string-no-newline": [
+   true,
+   {
+    "message": "Nieprawidłowe przeniesienie ciągu znaków do nowej lini"
+   }
+  ],
+  "unit-no-unknown": [
+   true,
+   {
+    "message": "Nieznana lub nieprawidłowa jednostka"
+   }
+  ],
+  "property-no-unknown": [
+   true,
+   {
+    "message": "Nieznana lub nieprawidłowa właściwości",
+    "checkPrefixed": true
+   }
+  ],
+  "keyframe-declaration-no-important": [
+   true,
+   {
+    "message": "Important! zabroniony w animacji w klatkach kluczowych"
+   }
+  ],
+  "declaration-block-no-duplicate-properties": [
+   true,
+   {
+    "message": "Niedozwolone powielenie właściwości"
+   }
+  ],
+  "declaration-block-no-shorthand-property-overrides": [
+   true,
+   {
+    "message": "Niedozwolone powielenie właściwości w kombach"
+   }
+  ],
+  "selector-pseudo-class-no-unknown": [
+   true,
+   {
+    "message": "Nieznany selektor pseudoklasy :"
+   }
+  ],
+  "selector-pseudo-element-no-unknown": [
+   true,
+   {
+    "message": "Nieznany selektor pseudoelementu ::"
+   }
+  ],
+  "selector-type-no-unknown": [
+   true,
+   {
+    "message": "Nieznany selektor typu"
+   }
+  ],
+  "block-no-empty": [
+   true,
+   {
+    "message": "Pusty blok"
+   }
+  ],
   "order/order": [
    "custom-properties",
    "declarations"

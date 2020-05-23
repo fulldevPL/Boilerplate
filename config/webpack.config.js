@@ -18,6 +18,10 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.(scss|sass)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.(jpg|png|jpeg|svg|gif)$/,
         use: 'file-loader',
       },
@@ -34,6 +38,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'My app',
       template: 'src/index.html',
+      hash: true,
     }),
+    // Secondary Webpage
+    // new HtmlWebpackPlugin({
+    //   title: 'About',
+    //   filename: 'about.html',
+    //   template: 'src/about.html',
+    //   hash: true,
+    // }),
   ],
 };

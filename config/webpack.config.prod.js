@@ -20,6 +20,10 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
+        test: /\.(scss|sass)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.(jpg|png|jpeg|svg|gif)$/,
         use: [
           {
@@ -43,10 +47,19 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'My app',
       template: 'src/index.html',
+      hash: true,
     }),
+    // Secondary Webpage
+    // new HtmlWebpackPlugin({
+    //   title: 'About',
+    //   filename: 'about.html',
+    //   template: 'src/about.html',
+    //   hash: true,
+    // }),
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[contenthash:6].css',
     }),

@@ -2,7 +2,10 @@
  "extends": [
   "stylelint-config-prettier"
  ],
- "plugins": ["stylelint-order"],
+ "plugins": [
+  "stylelint-order",
+  "stylelint-scss"
+ ],
  "rules": {
   "color-no-invalid-hex": [
    true,
@@ -148,6 +151,7 @@
    "text-decoration",
    "font-family",
    "cursor"
-  ]
+  ],
+  "scss/at-extend-no-missing-placeholder": true
  }
 }

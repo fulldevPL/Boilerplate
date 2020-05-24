@@ -1,0 +1,35 @@
+/* Reset */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Main Style */
+
+body,
+html {
+  font-size: 20px;
+  line-height: 1.7rem;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  padding-top: 20px;
+}
+
+p {
+  margin: 10px 0;
+}

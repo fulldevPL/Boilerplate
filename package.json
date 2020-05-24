@@ -1,5 +1,5 @@
 {
-  "name": "ps",
+  "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,10 @@
     "start": "webpack-dev-server --config ./config/webpack.config.js",
     "prod": "webpack --config ./config/webpack.config.prod.js",
     "dev": "webpack --config ./config/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulldevPL/Boilerplate.git"
   },
   "author": "Maciej Szeremeta",
   "license": "ISC",

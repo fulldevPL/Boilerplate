@@ -14,7 +14,11 @@
   },
   "author": "Maciej Szeremeta",
   "license": "ISC",
+  "browserslist": "> 0.2%,not IE 11",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "browserslist": "^4.12.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
@@ -44,8 +48,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,html,css}": [
       "prettier --config .prettierrc --write",
-      "stylelint --config .stylelintrc --fix",
-      "stylelint --syntax=scss",
+      "stylelint --config .stylelintrc.json --fix",
       "git add ."
     ]
   }

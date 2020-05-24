@@ -1,6 +1,7 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -28,12 +29,29 @@ module.exports = {
     ],
   },
   devServer: {
-    open: true,
+    // open: true,
+    // https: true,
+    compress: true,
     host: 'localhost',
-    port: 8080,
+    port: 8000,
     contentBase: path.resolve(__dirname, '../', 'public'),
   },
   plugins: [
+    new BrowserSyncPlugin(
+      {
+        browser: ['chrome'],
+        // browser: ['chrome', 'firefox', 'iexplore'],
+        host: 'localhost',
+        port: 8080,
+        // proxy the Webpack Dev Server endpoint
+        proxy: 'http://localhost:8000/',
+      },
+      {
+        // prevent BrowserSync from reloading the page
+        // and let Webpack Dev Server take care of this
+        reload: false,
+      }
+    ),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'My app',

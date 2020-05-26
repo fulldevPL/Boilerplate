@@ -104,6 +104,78 @@
     "message": "Pusty blok"
    }
   ],
+  "media-feature-name-no-unknown": [
+   true,
+   {
+    "message": "Nieznane właściwości @media"
+   }
+  ],
+  "at-rule-no-unknown": [
+   true,
+   {
+    "message": "Nieznane zasady np. @unknown"
+   }
+  ],
+  "comment-no-empty": [
+   true,
+   {
+    "message": "Pusty komentarz"
+   }
+  ],
+  "no-descending-specificity": [
+   true,
+   {
+    "message": "Nie zezwalaj na selektory o niższej specyficzności po nadpisaniu selektorów o wyższej specyficzności"
+   }
+  ],
+  "no-duplicate-at-import-rules": [
+   true,
+   {
+    "message": "Duplikowany arkusz stylów @import"
+   }
+  ],
+  "no-duplicate-selectors": [
+   true,
+   {
+    "message": "Powielony selektor stylów"
+   }
+  ],
+  "no-extra-semicolons": [
+   true,
+   {
+    "message": "Powielony średnik na końcu reguły"
+   }
+  ],
+  "no-invalid-double-slash-comments": [
+   true,
+   {
+    "message": "Błędny sposób komentowania //"
+   }
+  ],
+  "alpha-value-notation": [
+   {
+    "message": "Kanał alfa musi być wyrażony w 0.5",
+    "string": "number"
+   }
+  ],
+  "color-function-notation": [
+   {
+    "message": "Wartość koloru musi być oddzielona przecinkami",
+    "string": "modern"
+   }
+  ],
+  "color-named": [
+   {
+    "message": "Wartość koloru niemoże być wyrażona nazwą",
+    "string": "never"
+   }
+  ],
+  "length-zero-no-unit": [
+   true,
+   {
+    "message": "Jednostki zerowe niepowinny posiadać opisu jednostki"
+   }
+  ],
   "order/order": [
    "custom-properties",
    "declarations"
@@ -111,23 +183,9 @@
   "order/properties-order": [
    "content",
    "display",
+   "justify-content",
+   "align-items",
    "float",
-   "padding",
-   "padding-top",
-   "padding-right",
-   "padding-bottom",
-   "padding-left",
-   "outline",
-   "border",
-   "border-color",
-   "border-radius",
-   "margin",
-   "margin-top",
-   "margin-right",
-   "margin-bottom",
-   "margin-left",
-   "box-sizing",
-   "overflow",
    "position",
    "top",
    "right",
@@ -139,18 +197,54 @@
    "height",
    "max-height",
    "min-height",
+   "z-index",
+   "padding",
+   "padding-top",
+   "padding-right",
+   "padding-bottom",
+   "padding-left",
+   "outline",
+   "border",
+   "border-top",
+   "border-right",
+   "border-bottom",
+   "border-left",
+   "border-color",
+   "border-top-color",
+   "border-right-color",
+   "border-bottom-color",
+   "border-left-color",
+   "border-radius",
+   "margin",
+   "margin-top",
+   "margin-right",
+   "margin-bottom",
+   "margin-left",
+   "box-sizing",
+   "overflow",
    "background",
    "background-color",
+   "background-image",
+   "background-attachment",
+   "background-size",
+   "background-repeat",
+   "background-position",
    "opacity",
    "color",
    "list-style",
    "font-family",
    "font-size",
+   "font-weight",
    "line-height",
    "text-align",
    "text-decoration",
-   "font-family",
-   "cursor"
+   "text-transform",
+   "letter-spacing",
+   "cursor",
+   "opacity",
+   "transform",
+   "box-shadow",
+   "transition"
   ],
   "scss/at-extend-no-missing-placeholder": true
  }

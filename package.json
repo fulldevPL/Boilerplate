@@ -47,7 +47,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,html,css,scss,sass}": [
+    "*.{js,jsx,ts,tsx,md,html,css,scss,sass,json}": [
       "prettier --config .prettierrc --write",
       "stylelint --config .stylelintrc.json --fix",
       "stylelint --syntax=css-in-js",

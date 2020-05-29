@@ -122,12 +122,6 @@
     "message": "Pusty komentarz"
    }
   ],
-  "no-descending-specificity": [
-   true,
-   {
-    "message": "Nie zezwalaj na selektory o niższej specyficzności po nadpisaniu selektorów o wyższej specyficzności"
-   }
-  ],
   "no-duplicate-at-import-rules": [
    true,
    {
@@ -152,28 +146,130 @@
     "message": "Błędny sposób komentowania //"
    }
   ],
-  "alpha-value-notation": [
-   {
-    "message": "Kanał alfa musi być wyrażony w 0.5",
-    "string": "number"
-   }
-  ],
-  "color-function-notation": [
-   {
-    "message": "Wartość koloru musi być oddzielona przecinkami",
-    "string": "modern"
-   }
-  ],
   "color-named": [
+   "never",
    {
-    "message": "Wartość koloru niemoże być wyrażona nazwą",
-    "string": "never"
+    "message": "Wartość koloru niemoże być wyrażona nazwą"
    }
   ],
   "length-zero-no-unit": [
    true,
    {
     "message": "Jednostki zerowe niepowinny posiadać opisu jednostki"
+   }
+  ],
+  "font-weight-notation": [
+   "named-where-possible",
+   {
+    "message": "Jednostki grubości czcionki muszą być wyrażone wartością numeryczną"
+   }
+  ],
+  "number-max-precision": [
+   2,
+   {
+    "message": "Precyzja jednostek ustawiona na 2"
+   }
+  ],
+  "shorthand-property-no-redundant-values": [
+   true,
+   {
+    "message": "Likwiduje zbędne jednostki w m,p,br"
+   }
+  ],
+  "declaration-no-important": [
+   true,
+   {
+    "message": "Nie zezwalaj !important w deklaracji."
+   }
+  ],
+  "selector-max-empty-lines": [
+   0,
+   {
+    "message": "niedozwolony odstęp miedzy selektorami"
+   }
+  ],
+  "selector-pseudo-element-colon-notation": [
+   "double",
+   {
+    "message": "pseudo-element powinien zawierać ::"
+   }
+  ],
+  "color-hex-case": [
+   "lower",
+   {
+    "message": "Niedozwolone użycie wielkich litere w wartości koloru"
+   }
+  ],
+  "function-comma-newline-after": [
+   "never-multi-line",
+   {
+    "message": "Niedozwolone przeniesienie do nowej lini po przecinku"
+   }
+  ],
+  "function-comma-space-after": [
+   "always",
+   {
+    "message": "Brak spacji po przecinku"
+   }
+  ],
+  "function-max-empty-lines": [
+   0,
+   {
+    "message": "Niepotrzebne spacje miedzy znakami w funkcji"
+   }
+  ],
+  "function-whitespace-after": [
+   "always",
+   {
+    "message": "Brak spacji miedzy funkcjami"
+   }
+  ],
+  "number-leading-zero": [
+   "always",
+   {
+    "message": "Brak zera przed przecinkiem"
+   }
+  ],
+  "unit-case": [
+   "lower",
+   {
+    "message": "Jednostki pisane dużymi znakami"
+   }
+  ],
+  "value-list-comma-newline-after": [
+   "always-multi-line",
+   {
+    "message": "yyy"
+   }
+  ],
+  "value-list-comma-space-after": [
+   "always-single-line",
+   {
+    "message": "xxx"
+   }
+  ],
+  "value-list-max-empty-lines": [
+   0,
+   {
+    "message": "Niedozwolone przerwy we wew deklaracji"
+   }
+  ],
+  "property-case": [
+   "lower",
+   {
+    "message": "Niedozwolone wielkie litery we właściwościach"
+   }
+  ],
+  "declaration-colon-space-after": [
+   "always-single-line",
+   {
+    "message": "zzz"
+   }
+  ],
+  "comment-whitespace-inside": [
+   "always",
+   {
+    "message": "Brak spacji w komentarzu"
    }
   ],
   "order/order": [

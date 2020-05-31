@@ -159,15 +159,15 @@
    }
   ],
   "font-weight-notation": [
-   "named-where-possible",
+   "numeric",
    {
     "message": "Jednostki grubości czcionki muszą być wyrażone wartością numeryczną"
    }
   ],
   "number-max-precision": [
-   2,
+   3,
    {
-    "message": "Precyzja jednostek ustawiona na 2"
+    "message": "Precyzja jednostek ustawiona na 3 miejsca po przecinku"
    }
   ],
   "shorthand-property-no-redundant-values": [
@@ -279,6 +279,7 @@
   "order/properties-order": [
    "content",
    "display",
+   "flex-wrap",
    "justify-content",
    "align-items",
    "float",
@@ -301,6 +302,7 @@
    "padding-left",
    "outline",
    "border",
+   "border-width",
    "border-top",
    "border-right",
    "border-bottom",
@@ -328,6 +330,7 @@
    "opacity",
    "color",
    "list-style",
+   "user-select",
    "font-family",
    "font-size",
    "font-weight",
@@ -339,8 +342,14 @@
    "cursor",
    "opacity",
    "transform",
+   "transform-origin",
    "box-shadow",
-   "transition"
+   "text-shadow",
+   "transition",
+   "animation",
+   "animation-duration",
+   "animation-delay",
+   "animation-fill-mode"
   ],
   "scss/at-extend-no-missing-placeholder": true
  }

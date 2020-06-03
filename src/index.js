@@ -1,8 +1,8 @@
 // Import js file
-import {message, messageDOM} from './message';
+import {message, messageDOM} from './tools/message';
 
 //Import txt file
-import info from './title.txt';
+import info from './data/title.txt';
 
 // Import scss file
 import './scss/style.scss';

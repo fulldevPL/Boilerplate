@@ -75,7 +75,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'My app',
-      template: 'src/index.html',
+      template: 'src/templates/index.html',
       hash: true,
     }),
     // Secondary Webpage

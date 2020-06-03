@@ -26,6 +26,9 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "^6.0.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
@@ -59,10 +62,12 @@
       "prettier --config .prettierrc --write",
       "stylelint --config .stylelintrc.json --fix",
       "stylelint --syntax=css-in-js",
+      "eslint --fix",
       "git add ."
     ]
   },
   "dependencies": {
-    "@babel/polyfill": "^7.10.1"
+    "@babel/polyfill": "^7.10.1",
+    "jquery": "^3.5.1"
   }
 }

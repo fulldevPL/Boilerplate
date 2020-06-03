@@ -1,20 +1,23 @@
 // Import js file
-import {message, messageDOM} from './tools/message';
-import './components/footer';
-import Creator from './tools/creator';
+import {message, messageDOM} from "./tools/message";
+import "./components/footer";
+import Creator from "./tools/creator";
+
+// Import jq file
+import "./tools/jqu";
 
 //Import txt file
-import info from './data/title.txt';
+import info from "./data/title.txt";
 
 // Import scss file
-import './sass/index.scss';
+import "./sass/index.scss";
 
-message('test import function');
+message("test import function");
 messageDOM(info);
 const e1 = new Creator();
-e1.addBgc('red');
+e1.addBgc("red");
 const e2 = new Creator();
-e2.addBgc('blue');
+e2.addBgc("blue");
 const e3 = new Creator();
 e3.addBgc();
 e3.showColor();

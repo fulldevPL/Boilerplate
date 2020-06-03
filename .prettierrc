@@ -19,9 +19,16 @@
    }
   },
   {
+   "files": ["*.js"],
+   "options": {
+    "singleQuote": true
+   }
+  },
+  {
    "files": [
     "*.prettierrc*",
     "*.stylelintrc*",
+    "*.eslintrc*",
     "*.gitignore*"
    ],
    "options": {

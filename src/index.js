@@ -21,6 +21,6 @@ e3.showColor();
 
 //Polyfille
 
-let promise = new Promise(function (resolve, reject) {
-  resolve('ok');
-});
+// let promise = new Promise(function (resolve, reject) {
+//   resolve('ok');
+// });

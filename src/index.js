@@ -18,3 +18,9 @@ e2.addBgc('blue');
 const e3 = new Creator();
 e3.addBgc();
 e3.showColor();
+
+//Polyfille
+
+let promise = new Promise(function (resolve, reject) {
+  resolve('ok');
+});

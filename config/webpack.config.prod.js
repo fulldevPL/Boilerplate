@@ -16,6 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.txt$/,
+        use: ['raw-loader'],
+      },
+      {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,

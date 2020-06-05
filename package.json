@@ -29,7 +29,6 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
@@ -38,6 +37,7 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "image-webpack-loader": "^6.0.0",
+    "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^10.2.6",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
@@ -63,11 +63,20 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,html,css,scss,sass}": [
+    "*.{md,html,css}": [
       "prettier --config .prettierrc --write",
       "stylelint --config .stylelintrc.json --fix",
       "stylelint --syntax=css-in-js",
+      "git add ."
+    ],
+    "*{scss,sass}": "stylelint --syntax=scss",
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --config .prettierrc --write",
       "eslint --fix",
+      "git add ."
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
       "git add ."
     ]
   },

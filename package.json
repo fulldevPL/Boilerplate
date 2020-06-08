@@ -6,11 +6,16 @@
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.config.js",
     "prod": "webpack --config ./config/webpack.config.prod.js",
-    "dev": "webpack --config ./config/webpack.config.js"
+    "dev": "webpack --config ./config/webpack.config.js",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fulldevPL/Boilerplate.git"
+  },
+  "resolutions": {
+    "http-proxy": "^1.18.1",
+    "yargs-parser": "^18.1.2"
   },
   "author": "Maciej Szeremeta",
   "license": "ISC",

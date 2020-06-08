@@ -24,6 +24,5 @@
    "single",
    {"allowTemplateLiterals": true}
   ]
- },
- "plugins": ["html"]
+ }
 }

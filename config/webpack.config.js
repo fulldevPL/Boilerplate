@@ -1,6 +1,7 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
   entry: {
     main: './src/index.js',
   },
+  devtool: 'source-map',
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, '../', 'dist'),
@@ -20,11 +22,33 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(scss|sass)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(jpg|png|jpeg|svg|gif)$/,
@@ -80,6 +104,9 @@ module.exports = {
       title: 'My app',
       template: 'src/templates/index.html',
       hash: true,
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name]-[contenthash:6].css',
     }),
     // Secondary Webpage
     // new HtmlWebpackPlugin({

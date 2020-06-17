@@ -19,7 +19,7 @@
   },
   "author": "Maciej Szeremeta",
   "license": "ISC",
-  "browserslist": "> 0.2%,not IE 11",
+  "browserslist": "> 0.2%,not IE >=11",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.10.1",

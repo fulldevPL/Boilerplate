@@ -23,9 +23,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './../',
+            },
+          },
           {
             loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              url: true,
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
             options: {
               sourceMap: true,
             },
@@ -35,9 +47,21 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './../',
+            },
+          },
           {
             loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              url: true,
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
             options: {
               sourceMap: true,
             },
@@ -52,7 +76,12 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|jpeg|svg|gif)$/,
-        use: 'file-loader',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name]-[contenthash:6].[ext]',
+          },
+        },
       },
       {
         test: /\.js$/,

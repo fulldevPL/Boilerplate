@@ -22,13 +22,29 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './../',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
               plugins: [require('postcss-preset-env')()],
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
             },
           },
         ],
@@ -36,8 +52,18 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './../',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
@@ -45,7 +71,18 @@ module.exports = {
               plugins: [require('postcss-preset-env')()],
             },
           },
-          'sass-loader',
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
@@ -54,8 +91,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name]-[contenthash:6].[ext]',
-              outputPath: 'img',
+              name: 'images/[name]-[contenthash:6].[ext]',
             },
           },
           {
@@ -107,8 +143,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[contenthash:6].css',
     }),
-    new CopyPlugin({
-      patterns: [{from: 'public/img', to: './img'}],
-    }),
+    // new CopyPlugin({
+    //   patterns: [{from: 'public/img', to: './img'}],
+    // }),
   ],
 };

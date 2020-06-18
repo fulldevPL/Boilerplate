@@ -21,6 +21,25 @@ module.exports = {
         use: ['raw-loader'],
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: {
+                list: [
+                  {
+                    tag: 'img',
+                    attribute: 'src',
+                    type: 'src',
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {

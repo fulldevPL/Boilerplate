@@ -2,7 +2,6 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -18,6 +17,25 @@ module.exports = {
       {
         test: /\.txt$/,
         use: ['raw-loader'],
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: {
+                list: [
+                  {
+                    tag: 'img',
+                    attribute: 'src',
+                    type: 'src',
+                  },
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -143,8 +161,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[contenthash:6].css',
     }),
-    // new CopyPlugin({
-    //   patterns: [{from: 'public/img', to: './img'}],
-    // }),
   ],
 };

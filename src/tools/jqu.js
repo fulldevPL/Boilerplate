@@ -1,6 +1,6 @@
-import photo from "../../public/img/photo.jpg";
+import photo from '../assets/img/photo.jpg';
 
-import $ from "jquery";
+import $ from 'jquery';
 
 export default (tag) => {
   $(tag).append(`<img src=${photo}>`);

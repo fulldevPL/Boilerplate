@@ -31,10 +31,15 @@ p {
 img {
   width: 100%;
 }
+.image {
+  float: left;
+  width: 20vw;
+  height: 20vw;
+}
 
 .image2 {
   float: left;
   width: 20vw;
   height: 20vw;
-  background: url('./../../public/img/photo.jpg') no-repeat center center/cover;
+  background: url('./../assets/img/photo.jpg') no-repeat center center/cover;
 }

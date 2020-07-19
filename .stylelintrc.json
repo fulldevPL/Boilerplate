@@ -357,12 +357,13 @@
    "background-size",
    "background-repeat",
    "background-position",
+   "background-origin",
    "object-fit",
    "opacity",
    "color",
    "list-style",
    "user-select",
-   "font,
+   "font",
    "font-family",
    "font-size",
    "font-weight",
@@ -388,7 +389,7 @@
    "animation-fill-mode",
    "animation-delay",
    "animation-direction",
-   "animation-timing-fuction"
+   "animation-timing-function"
   ],
   "scss/at-extend-no-missing-placeholder": true
  }
